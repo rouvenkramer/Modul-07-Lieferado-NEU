@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="./img/pizza.png">
+
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./basket.css">
+    <script src="./script.js"></script>
+    <script src="./init.js"></script>
+    <script src="./menus.js"></script>
+    <script src="./basket.js"></script>
+    <script src="./saveAndLoad.js"></script>
+    <title>Lieferado</title>
+</head>
+
+<body onload="init()">
+
+    <main>
+
+        <header>
+            <div>LIEFERANDO</div>
+            <div>SPEISEKARTE</div>
+            <div>FLAG</div>
+        </header>
+
+
+        <div id="menusAndBasket">
+
+  
+            <div id="menusWrapper">
+
+                <div class="restaurantHeader">RESTAURANT</div>
+
+                <div id="menuNav">
+                    <button onclick="">pasta pusher</button>
+                    <button onclick="">pasta pusher</button>
+                    <button onclick="">pasta pusher</button>
+                </div>
+
+      
+                <div class="menusContainer">
+                    <div id="menusSection">
+                        <!-- Content will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="basketWrapper">
+                <div id="basket">
+                    <h1 id="basketHeadline">WARENKORB:</h1>
+
+                    <div id="basketContent">
+                    </div>
+
+                    <div id="orderButtonContainer">
+                        <button id="orderButton">
+                            BESTELLEN
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="mobileBasketWrapper" onclick="expandMobileBasket()">
+                <div id="mobileBasket">
+                    <h2 id="mobileBasketHeadline">WARENKORB MOBILE</h2>
+
+                    <div id="mobileBasketContent">
+
+                    </div>
+            
+                </div>
+
+            </div>
+
+        </div>
+
+        <footer>
+            Footer
+        </footer>
+    </main>
+</body>
+
+</html>
