@@ -14,7 +14,7 @@ function renderBasket() {
 
     let basket = JSON.parse(localStorage.getItem('storedBasket')) || [];
 
-    renderBasketOrderButton();
+    renderBasketOrderButtons();
 
     for (let i = 0; i < basket.length; i++) {
         let basketMenus = basket[i];
@@ -29,10 +29,10 @@ function renderBasket() {
 }
 
 
-function renderBasketOrderButton() {
+function renderBasketOrderButtons() {
 
     let basketOrderButton = document.getElementById("orderButton");
-    let mobileBasketOrderButton = document.getElementById("mobileBasketWrapper");
+    let mobileBasketOrderButton = document.getElementById("mobileBasketOrderButton");
     let mobileBasketHeadline = document.getElementById("mobileBasketHeadline");
     let sum = totalPrice.toFixed(2);
 

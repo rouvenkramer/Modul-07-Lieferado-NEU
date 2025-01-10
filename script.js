@@ -23,7 +23,7 @@ function addToBasket(name, price) {
 
     renderBasketHeadline();
 
-    renderBasketOrderButton();
+    renderBasketOrderButtons();
 
 }
 
