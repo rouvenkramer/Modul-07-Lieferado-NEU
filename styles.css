@@ -24,7 +24,8 @@ header {
 }
 
 footer {
-    height:100px;
+    height: 200px;
+    background-color: #EFEDE9;
 }
 
 #menuNav {
@@ -33,11 +34,33 @@ footer {
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    background-color: darkcyan;
+    background-color: #FCFCFC;
     position: sticky;
     top: 0;
     overflow: hidden;
     z-index: 500;
+    box-shadow: 0px 8px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.menuNavDivAsButtonContainer{
+    box-sizing: border-box;
+    padding-inline: 12px;
+    padding-block: 5px;
+    background-color: #000000;
+    border-radius: 16px;
+    margin-right: 8px;
+
+}
+
+.menuNavDivAsButton {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.menuNavButtonContainer :hover{
+
+    background-color: #232323;
+
 }
 
 #menusAndBasket {
@@ -48,7 +71,7 @@ footer {
     box-sizing: border-box;
     position: sticky;
     top: 0;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     height: auto;
     width: 100%;
 
@@ -82,12 +105,13 @@ footer {
 
 .restaurantHeader {
     box-sizing: border-box;
-    
+    border-radius: 16px;
     height: 320px;
+    margin-block: 8px;
     background-image: url(./img/restaurant\ header_1500x857.jpg);
     background-size: cover;
     background-position: center;
-    box-shadow: 0px 8px 8px -2px rgba(0, 0, 0, 0.25);
+    /*box-shadow: 0px 8px 8px -2px rgba(0, 0, 0, 0.25);*/
 }
 
 .menusContainer {
@@ -102,10 +126,10 @@ footer {
 }
 
 .menuCategory h1 {
-padding: 16px;
+    padding: 16px;
 }
 
-.singleMenuWrapper{
+.singleMenuWrapper {
     border-top: 1px solid rgb(205, 205, 205);
 }
 
@@ -128,50 +152,57 @@ padding: 16px;
     background-color: #FFFFFF;
 }
 
-.singleMenuPrice{
+.singleMenuPrice {
     color: #ffa200;
 }
 
-.singleMenu p{
-font-size: large;
-margin-block: 8px;
+.singleMenu p {
+    font-size: large;
+    margin-block: 8px;
 
 }
 
-.menuThumbnail{
+.menuThumbnail {
     position: relative;
     display: inline-block;
+    transition: transform 0.9s ease;
+}
+
+.menuThumbnail img:hover{
+    transform: scale(1.15);
+  
 }
 
 .menuThumbnail img {
-    max-height: 128px;
-    width: auto;
+    max-width: 200px;
     border-radius: 32px;
     padding: 8px;
+    object-fit: cover;
 }
 
 
-.addButton{
+.addButton {
     position: absolute;
     z-index: 300;
-    top:0;
-    right:0;
-    width:32px;
-    height:32px;
+    top: 0;
+    right: 0;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border-style: solid;
-    border-color:darkgrey;
+    border-color: darkgrey;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.addButton:hover{
- background-color: white;
- border-style: solid;
- border-color: lightgray;
- color: orange;
- font-size: xx-large;
+.addButton:hover {
+    background-color: white;
+    border-style: solid;
+    border-color: lightgray;
+    color: orange;
+    font-size: xx-large;
 
 }
 
@@ -195,16 +226,16 @@ h3 {
     background-color: #FF8000;
     opacity: 95%;
     border-radius: 16px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#mobileBasketWrapper{
+#mobileBasketWrapper {
     position: fixed;
     z-index: 1000;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     height: 100dvh;
     width: 100dvw;
     right: 0;
@@ -223,18 +254,18 @@ h3 {
     background-color: #FF8000;
     opacity: 95%;
     border-radius: 16px;
-    display:none;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 #orderButtonContainer {
-    display:none;
+    display: none;
     flex-direction: column;
     justify-content: center;
-    }
+}
 
-#mobileBasket{
+#mobileBasket {
     width: 100%;
     text-align: center;
 
@@ -247,7 +278,7 @@ h3 {
 @media (max-width:1024px) {
 
     #basketWrapper {
-    display: none;
+        display: none;
     }
 
 }
@@ -256,5 +287,18 @@ h3 {
 
     #mobileBasketWrapper {
         display: none;
+    }
+}
+
+@media (min-width:1024px) {
+
+    #mobileBasketWrapper {
+        display: none;
+    }
+
+    .restaurantHeader {
+
+        border-radius: 0;
+
     }
 }
