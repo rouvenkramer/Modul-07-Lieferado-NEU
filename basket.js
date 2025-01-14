@@ -13,18 +13,27 @@ function renderBasket() {
     resetBasket();
 
     let basket = JSON.parse(localStorage.getItem('storedBasket')) || [];
+  
 
     renderBasketOrderButtons();
 
     for (let i = 0; i < basket.length; i++) {
         let basketMenus = basket[i];
         let basketDiv = document.getElementById("basketContent");
+        let mobileBasketDiv = document.getElementById('mobileBasketContent');
         basketDiv.innerHTML += `
         <div>
         <div>${basketMenus.name} ${basketMenus.amount}</div>
         <button onclick = "deleteFromBasket()">X</button>
         </div>
         `
+        mobileBasketDiv.innerHTML += `
+        <div>
+        <div>${basketMenus.name} ${basketMenus.amount}</div>
+        <button onclick = "deleteFromBasket()">X</button>
+        </div>
+        `
+       
     }
 }
 

@@ -19,6 +19,8 @@ function addToBasket(name, price) {
 
     calculateBasket();
 
+    updateMobileBasketWrapper();
+
     renderBasket();
 
     renderBasketHeadline();

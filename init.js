@@ -9,6 +9,7 @@ function init() {
     renderMenus();
 
     renderBasket();
+    updateMobileBasketWrapper();
     renderBasketHeadline();
     renderBasketOrderButton();
 
@@ -74,4 +75,16 @@ function getMenuItemHTML(item) {
             </div>
         </div>`;
 }
+
+function updateMobileBasketWrapper() {
+
+    let wrapper = document.getElementById("mobileBasketWrapper");
+    let amount = totalAmount;
+
+    if (amount === 0) {
+        wrapper.style.display = "none";
+    }
+    else { wrapper.style.display = "flex" }
+};
+
 
