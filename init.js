@@ -11,7 +11,7 @@ function init() {
     renderBasket();
     updateMobileBasketWrapper();
     renderBasketHeadline();
-    renderBasketOrderButton();
+    renderBasketOrderButtons();
 
 }
 
@@ -78,13 +78,14 @@ function getMenuItemHTML(item) {
 
 function updateMobileBasketWrapper() {
 
-    let wrapper = document.getElementById("mobileBasketWrapper");
-    let amount = totalAmount;
+    const wrapper = document.getElementById("mobileBasketWrapper");
+    const amount = totalAmount;
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
 
-    if (amount === 0) {
-        wrapper.style.display = "none";
+    if (amount === 0 || mediaQuery.matches) {
+        wrapper.style.display = 'none';
     }
-    else { wrapper.style.display = "flex" }
+    else { wrapper.style.display = 'flex'; }
 };
 
 

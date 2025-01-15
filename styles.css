@@ -103,6 +103,12 @@ footer {
     top: 0;
 }
 
+.basketMenuDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .restaurantHeader {
     box-sizing: border-box;
     border-radius: 16px;
@@ -231,7 +237,7 @@ h3 {
 }
 
 #mobileBasketWrapper {
-
+    display: none;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -277,18 +283,8 @@ h3 {
     }
 }
 
-@media (min-width:1024px) {
-
-    #mobileBasketWrapper {
-      
-    }
-}
 
 @media (min-width:1024px) {
-
-    #mobileBasketWrapper {
-        display: none;
-    }
 
     .restaurantHeader {
 

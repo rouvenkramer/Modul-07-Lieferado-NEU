@@ -22,8 +22,8 @@ function renderBasket() {
         let basketDiv = document.getElementById("basketContent");
         let mobileBasketDiv = document.getElementById('mobileBasketContent');
         basketDiv.innerHTML += `
-        <div>
-        <div>${basketMenus.name} ${basketMenus.amount}</div>
+        <div class="basketMenuDiv">
+        <div> - ${basketMenus.amount} + ${basketMenus.name}</div>
         <button onclick = "deleteFromBasket()">X</button>
         </div>
         `

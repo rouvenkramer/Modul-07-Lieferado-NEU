@@ -51,7 +51,7 @@ const menus = [
             },
             {
                 name: "Bacon BBQ Burger", price: 10.99, info: "Beef patty with crispy bacon and smoky BBQ sauce",
-                image: "./img/menuThumbs/baconBBQBurgerThumb.jpg"
+                image: "./img/menuThumbs/bbq burgerthumb.jpg"
             },
             {
                 name: "Veggie Burger", price: 9.99, info: "Plant-based patty with avocado and sprouts",
