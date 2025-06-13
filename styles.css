@@ -108,6 +108,32 @@ footer {
     justify-content: space-between;
 }
 
+.basketMenuButtonsDiv{
+display:flex;
+box-sizing: border-box;
+padding: 4px;
+}
+
+.basketMenusNameDiv {
+    padding-left: 4px;
+}
+
+.basketMenusAmountDiv {
+    padding-inline: 4px;
+    font-weight: bolder;
+}
+
+.roundBasketButton{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
 
 .restaurantHeader {
     box-sizing: border-box;
@@ -139,6 +165,10 @@ footer {
     border-top: 1px solid rgb(205, 205, 205);
 }
 
+.singleMenuWrapper :hover{
+    background-color: rgb(245, 245, 245);
+}
+
 .singleMenuNameAndImg {
     box-sizing: border-box;
     display: flex;
@@ -157,6 +187,8 @@ footer {
     height: auto;
     background-color: #FFFFFF;
 }
+
+
 
 .singleMenuPrice {
     color: #ffa200;
@@ -250,6 +282,7 @@ h3 {
 
 
 #mobileBasketOrderButton {
+  
     height: 80px;
     right: 8px;
     left: 8px;
@@ -261,6 +294,17 @@ h3 {
     border-radius: 16px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+
+#closeMobileBasket{
+text-align: right;
+margin-right: 25px;
+cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 #orderButtonContainer {
@@ -279,8 +323,10 @@ h3 {
 @media (max-width:1024px) {
 
     #basketWrapper {
-        /*display: none;*/
+        display: none;
     }
+
+
 }
 
 
@@ -289,6 +335,13 @@ h3 {
     .restaurantHeader {
 
         border-radius: 0;
+    }
 
+    #mobileBasketWrapper {
+        display: none;
+    }
+
+    #mobileBasketOrderButton {
+        display: none;
     }
 }

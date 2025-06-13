@@ -76,16 +76,4 @@ function getMenuItemHTML(item) {
         </div>`;
 }
 
-function updateMobileBasketWrapper() {
-
-    const wrapper = document.getElementById("mobileBasketWrapper");
-    const amount = totalAmount;
-    const mediaQuery = window.matchMedia('(min-width: 1024px)');
-
-    if (amount === 0 || mediaQuery.matches) {
-        wrapper.style.display = 'none';
-    }
-    else { wrapper.style.display = 'flex'; }
-};
-
 
